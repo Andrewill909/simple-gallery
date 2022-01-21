@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'RobotoMonoRegular';
+    src: url(./fonts/RobotoMono-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'MontserratSemiBold';
+    src: url(./fonts/Montserrat-SemiBold.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'MontserratBold';
+    src: url(./fonts/Montserrat-Bold.ttf) format('truetype');
+  }
+
+  * {
+    @apply font-roboto;
+  }
+
+  html {
+    @apply font-roboto text-blue-3 bg-yellow-1 scroll-smooth;
+  }
+
+  ul,
+  li {
+    @apply list-none;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  img {
+    @apply w-full h-full object-cover;
+  }
+
+  button {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-6xl w-11/12 mx-auto;
+  }
+}
