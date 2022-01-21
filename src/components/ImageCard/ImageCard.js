@@ -1,4 +1,6 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ImageCard = ({ img }) => {
   let date = new Date(img.published);
@@ -7,7 +9,7 @@ const ImageCard = ({ img }) => {
   return (
     <div className="min-w-full max-h-[50rem] max-w-sm rounded-lg overflow-hidden shadow-lg bg-white justify-self-center border-4 border-black flex flex-col justify-between">
       <div className="w-full max-h-full p-4 rounded-lg overflow-hidden">
-        <img className="object-cover h-52 w-full" src={img.photo} alt="Mountain" />
+        <LazyLoadImage wrapperClassName="object-cover h-52 w-full" src={img.photo} alt="Image" effect="blur" />
       </div>
       <div className="px-6 py-4">
         <div className="font-bold text-2xl mb-2 text-blue-2">{img.title.trim().length === 0 ? 'No Title' : img.title.slice(0, 20)}</div>
