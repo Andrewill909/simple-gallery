@@ -6,6 +6,7 @@ module.exports = {
         roboto: ['RobotoMonoRegular'],
         'mont-bold': ['MontserratBold'],
         'mont-semibold': ['MontserratSemiBold'],
+        grand: ['GrandHotel'],
       },
       colors: {
         'yellow-1': '#F8E9A1',

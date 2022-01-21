@@ -18,6 +18,11 @@
     src: url(./fonts/Montserrat-Bold.ttf) format('truetype');
   }
 
+  @font-face {
+    font-family: 'GrandHotel';
+    src: url(./fonts/GrandHotel-Regular.ttf) format('truetype');
+  }
+
   * {
     @apply font-roboto;
   }
