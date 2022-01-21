@@ -8,20 +8,21 @@ import ImageCard from '../../components/ImageCard/ImageCard';
 
 const Home = () => {
   const [image, setImage] = useState([]);
-  const [tag, setTag] = useState([]);
+  const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const feed = await getFeed({ tag });
+      console.log(tags);
+      const feed = await getFeed({ tags });
       setImage(feed.data.data);
       setIsLoading(false);
     })();
-  }, [tag]);
+  }, [tags]);
 
   return (
     <>
-      <Searchbar />
+      <Searchbar setCustomTags={(tags) => setTags([...tags])} />
       <ImageContainer>
         {!isLoading && image.length < 1 && <h1 className="text-6xl text-center mx-auto mt-32 text-white">Image not found</h1>}
         {isLoading ? (
