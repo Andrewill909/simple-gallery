@@ -23,7 +23,7 @@
   }
 
   html {
-    @apply font-roboto text-blue-3 bg-yellow-1 scroll-smooth;
+    @apply font-roboto text-blue-3 bg-blue-3 scroll-smooth;
   }
 
   ul,
