@@ -5,6 +5,7 @@ import { getFeed } from '../../api/feed';
 import Searchbar from '../../components/Searchbar';
 import ImageContainer from '../../components/ImageContainer';
 import ImageCard from '../../components/ImageCard/ImageCard';
+import SpinnerLoading from '../../components/SpinnerLoading';
 
 const Home = () => {
   const [image, setImage] = useState([]);
@@ -26,7 +27,7 @@ const Home = () => {
       <ImageContainer>
         {!isLoading && image.length < 1 && <h1 className="text-6xl text-center mx-auto mt-32 text-white">Image not found</h1>}
         {isLoading ? (
-          <h1 className="text-6xl text-center mx-auto mt-32 text-white">Loading</h1>
+          <SpinnerLoading />
         ) : (
           image.map((img, idx) => {
             return <ImageCard key={idx} img={img} />;
