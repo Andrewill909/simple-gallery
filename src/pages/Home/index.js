@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      console.log(tags);
+      setIsLoading(true);
       const feed = await getFeed({ tags });
       setImage(feed.data.data);
       setIsLoading(false);
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <Searchbar setCustomTags={(tags) => setTags([...tags])} />
+      <Searchbar setCustomTags={(tags) => setTags([...tags])} isLoading={isLoading} />
       <ImageContainer>
         {!isLoading && image.length < 1 && <h1 className="text-6xl text-center mx-auto mt-32 text-white">Image not found</h1>}
         {isLoading ? (

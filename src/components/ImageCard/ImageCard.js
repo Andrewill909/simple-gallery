@@ -19,7 +19,7 @@ const ImageCard = ({ img }) => {
           img.tags.slice(0, 3).map((tag, idx) => {
             return (
               <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-2 mr-2 mb-2">
-                #{tag}
+                #{tag.slice(0, 20)}
               </span>
             );
           })
