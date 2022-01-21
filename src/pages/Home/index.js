@@ -8,6 +8,7 @@ import ImageCard from '../../components/ImageCard/ImageCard';
 
 const Home = () => {
   const [image, setImage] = useState([]);
+  const [tag, setTag] = useState([]);
 
   useEffect(() => {
     (async () => {

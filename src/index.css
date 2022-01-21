@@ -51,6 +51,6 @@
 
 @layer utilities {
   .wrapper {
-    @apply max-w-6xl w-11/12 mx-auto;
+    @apply max-w-7xl w-11/12 mx-auto;
   }
 }
