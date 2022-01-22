@@ -30,18 +30,18 @@ const Searchbar = ({ setCustomTags, isLoading }) => {
           inputFieldPosition="bottom"
           placeholder="Search Image Tags (Enter)"
           classNames={{
-            tag: 'bg-yellow-1 p-2 md:p-4 rounded-lg mx-2 md:mx-4 ring ring-black',
+            tag: 'bg-pink-1 p-2 md:p-4 rounded-lg mx-2 md:mx-4 ring ring-white text-white',
             tags: 'w-full',
             tagInput: 'flex justify-center',
             tagInputField: 'mt-12 w-full md:w-[50%] h-[3rem] text-center font-semibold outline-none ring ring-yellow-1 rounded-xl text-sm md:text-xl',
           }}
         />
       </div>
-      <div className="mt-10 text-white flex justify-center">
-        <button disabled={isLoading} onClick={handleSubmit} className="mr-4 p-4 bg-blue-2 hover:bg-yellow-1 hover:text-blue-2 rounded-xl transition delay-75 disabled:bg-gray-600">
+      <div className="mt-10 text-white flex justify-center text-sm md:text-base">
+        <button disabled={isLoading} onClick={handleSubmit} className="mr-4 p-3 md:p-4 bg-blue-2 hover:bg-teal-300 hover:text-blue-2 rounded-xl transition delay-75 disabled:bg-gray-600">
           Search
         </button>
-        <button onClick={onClearTag} className="p-4 bg-red-500 hover:bg-yellow-1 hover:text-blue-2 rounded-xl transition delay-75 ">
+        <button onClick={onClearTag} className="p-3 md:p-4 bg-red-500 hover:bg-teal-300 hover:text-blue-2 rounded-xl transition delay-75 ">
           Clear Tags
         </button>
       </div>

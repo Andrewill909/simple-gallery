@@ -9,16 +9,6 @@
   }
 
   @font-face {
-    font-family: 'MontserratSemiBold';
-    src: url(./fonts/Montserrat-SemiBold.ttf) format('truetype');
-  }
-
-  @font-face {
-    font-family: 'MontserratBold';
-    src: url(./fonts/Montserrat-Bold.ttf) format('truetype');
-  }
-
-  @font-face {
     font-family: 'GrandHotel';
     src: url(./fonts/GrandHotel-Regular.ttf) format('truetype');
   }

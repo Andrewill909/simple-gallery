@@ -6,17 +6,23 @@ import Searchbar from '../../components/Searchbar';
 import ImageContainer from '../../components/ImageContainer';
 import ImageCard from '../../components/ImageCard/ImageCard';
 import SpinnerLoading from '../../components/SpinnerLoading';
+import Pagination from '../../components/Pagination/Pagination';
 
 const Home = () => {
   const [image, setImage] = useState([]);
   const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  //? Pagination
+  const [curPage, setCurPage] = useState(1);
+  const [perPage] = useState(6);
+  const skip = (curPage - 1) * perPage;
 
   useEffect(() => {
     (async () => {
       setIsLoading(true);
       const feed = await getFeed({ tags });
       setImage(feed.data.data);
+      setCurPage(1);
       setIsLoading(false);
     })();
   }, [tags]);
@@ -29,11 +35,12 @@ const Home = () => {
         {isLoading ? (
           <SpinnerLoading />
         ) : (
-          image.map((img, idx) => {
+          image.slice(skip, curPage * perPage).map((img, idx) => {
             return <ImageCard key={idx} img={img} />;
           })
         )}
       </ImageContainer>
+      {!isLoading && image.length > 0 && <Pagination perPage={perPage} itemCount={image.length} setCurPage={setCurPage} />}
     </>
   );
 };

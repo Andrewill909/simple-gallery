@@ -7,7 +7,7 @@ const ImageCard = ({ img }) => {
   let dateStr = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
 
   return (
-    <div className="min-w-full max-h-[50rem] max-w-sm rounded-lg overflow-hidden shadow-lg bg-white justify-self-center border-4 border-black flex flex-col justify-between">
+    <div className="transition ease-in hover:scale-[1.05] min-w-full max-h-[50rem] max-w-sm rounded-lg overflow-hidden shadow-lg bg-white justify-self-center border-4 border-black flex flex-col justify-between">
       <div className="w-full max-h-full p-4 rounded-lg overflow-hidden">
         <LazyLoadImage wrapperClassName="object-cover h-52 w-full" src={img.photo} alt="Image" effect="blur" />
       </div>

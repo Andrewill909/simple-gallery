@@ -4,8 +4,6 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: ['RobotoMonoRegular'],
-        'mont-bold': ['MontserratBold'],
-        'mont-semibold': ['MontserratSemiBold'],
         grand: ['GrandHotel'],
       },
       colors: {
