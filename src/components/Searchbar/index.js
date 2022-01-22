@@ -38,7 +38,7 @@ const Searchbar = ({ setCustomTags, isLoading }) => {
         />
       </div>
       <div className="mt-10 text-white flex justify-center text-sm md:text-base">
-        <button disabled={isLoading} onClick={handleSubmit} className="mr-4 p-3 md:p-4 bg-blue-2 hover:bg-teal-300 hover:text-blue-2 rounded-xl transition delay-75 disabled:bg-gray-600">
+        <button data-testid="btn" disabled={isLoading} onClick={handleSubmit} className="mr-4 p-3 md:p-4 bg-blue-2 hover:bg-teal-300 hover:text-blue-2 rounded-xl transition delay-75 disabled:bg-gray-600">
           Search
         </button>
         <button onClick={onClearTag} className="p-3 md:p-4 bg-red-500 hover:bg-teal-300 hover:text-blue-2 rounded-xl transition delay-75 ">
