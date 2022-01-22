@@ -13,14 +13,16 @@ const ImageCard = ({ img }) => {
       </div>
       <div className="px-6 py-4">
         <div className="font-bold text-2xl mb-2 text-blue-2">{img.title.trim().length === 0 ? 'No Title' : img.title.slice(0, 20)}</div>
-        <p className="text-blue-2 text-base font-semibold">Posted on : {dateStr}</p>
+        <p className="text-blue-2 text-base font-semibold" data-testid="date">
+          Posted on : {dateStr}
+        </p>
         <p className="text-blue-2 text-base font-semibold">{'Author : ' + img.author.replace(/(nobody@flickr\.com)|(\(")|("\))/g, '')}</p>
       </div>
       <div className="px-6 pt-4 pb-2 min-h-[8rem]">
         {img.tags.length > 0 ? (
           img.tags.slice(0, 4).map((tag, idx) => {
             return (
-              <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-2 mr-2 mb-2">
+              <span data-testid="tag" key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-2 mr-2 mb-2">
                 #{tag.slice(0, 20)}
               </span>
             );

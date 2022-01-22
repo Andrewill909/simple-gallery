@@ -4,7 +4,7 @@ import { getFeed } from '../../api/feed';
 //? Components
 import Searchbar from '../../components/Searchbar';
 import ImageContainer from '../../components/ImageContainer';
-import ImageCard from '../../components/ImageCard/ImageCard';
+import ImageCard from '../../components/ImageCard';
 import SpinnerLoading from '../../components/SpinnerLoading';
 import Pagination from '../../components/Pagination/Pagination';
 
